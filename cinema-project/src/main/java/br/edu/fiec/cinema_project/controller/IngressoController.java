@@ -1,13 +1,13 @@
 package br.edu.fiec.cinema_project.controller;
 
 
+import br.edu.fiec.cinema_project.model.dto.IngressoDTO;
 import br.edu.fiec.cinema_project.model.enty.Ingressos;
 import br.edu.fiec.cinema_project.service.IngressoService;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.stream.Stream;
 
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
@@ -25,6 +25,18 @@ public class IngressoController {
     @GetMapping(produces = APPLICATION_JSON_VALUE, value = "id")
     public Ingressos getById(Integer id){
         return ingressoService.getById(id);
+    }
+
+    @ResponseStatus(HttpStatus.OK)
+    @GetMapping(produces = APPLICATION_JSON_VALUE, value = "name")
+    public Stream<Object> getByNome_ingresso(String nome_cliente){
+        return ingressoService.getByNome(nome_cliente);
+    }
+
+    @ResponseStatus(HttpStatus.CREATED)
+    @PostMapping(consumes = APPLICATION_JSON_VALUE, value = "create")
+    public void create(@RequestBody IngressoDTO ingressoDTO){
+        ingressoService.create(ingressoDTO);
     }
 
 }

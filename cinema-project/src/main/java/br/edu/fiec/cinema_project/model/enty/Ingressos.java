@@ -20,8 +20,8 @@ public class Ingressos {
     @Column(nullable = false,name = "id_sessao")
     private Integer id_sessao;
 
-    @Column(name = "nome_cliente")
-    private String nome_cliente;
+    @Column(name = "name_cliente")
+    private String nameCliente;
 
     @Column(name = "assento")
     private String assento;
