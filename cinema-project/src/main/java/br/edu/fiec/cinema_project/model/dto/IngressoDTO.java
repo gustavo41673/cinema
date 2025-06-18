@@ -9,14 +9,14 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class IngressoDTO {
 
+    private Integer id_sessao;
 
     private String nameCliente;
 
-
     private String assento;
-
 
     private String tipo_ingresso;
 
     private Float valor;
+
 }

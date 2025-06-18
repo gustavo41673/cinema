@@ -35,5 +35,6 @@ public class Ingressos {
     @Column(nullable = false, name = "valor")
     private Float valor;
 
-
+    public Ingressos(Integer idSessao, String nameCliente, String assento, String tipoIngresso, String status, Float valor) {
+    }
 }
