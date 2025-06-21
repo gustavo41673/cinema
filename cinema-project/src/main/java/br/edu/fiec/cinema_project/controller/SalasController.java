@@ -46,8 +46,9 @@ public class SalasController {
         return salasService.getByNome(nome);
     }
 
-//    @GetMapping(value = "/comSessao", produces = APPLICATION_JSON_VALUE)
-//    public ResponseEntity<List<Salas>> salasComSessao() {
-//        return ResponseEntity.ok(salasService.salasComSessao());
-//    }
+    @ResponseStatus(HttpStatus.OK)
+    @DeleteMapping(value = "delete")
+    public void deleteAll(){
+        salasService.deleteAll();
+    }
 }

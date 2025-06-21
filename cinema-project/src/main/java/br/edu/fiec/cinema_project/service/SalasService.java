@@ -65,18 +65,24 @@ public class SalasService {
         }
         return resultado;
     }
+    public void delete(Integer id){
+        Salas salaEncontrada = salaRepository.findById(id).map(salas ->
+                new Salas(
+                        salas.getId_sala(),
+                        salas.getNome(),
+                        salas.getCapacidade(),
+                        salas.getTipo_sala()
+                )
+        ).orElse(null);
 
-//    public List<Salas> salasComSessao() {
-//        List<Salas> resultado = new ArrayList<>();
-//        for (Salas sala : salaRepository.findSalasComSessao()) {
-//            resultado.add(new Salas(
-//                    sala.getId_sala(),
-//                    sala.getNome(),
-//                    sala.getCapacidade()
-//            ));
-//        }
-//        return resultado;
-//    }
+        assert salaEncontrada != null: "é nulo";
+        salaRepository.delete(salaEncontrada);
+    }
 
-
+    public void deleteAll(){
+        salaRepository.deleteAll();
+    }
 }
+
+
+
