@@ -1,4 +1,4 @@
-package br.edu.fiec.cinema_project.model.enty;
+package br.edu.fiec.cinema_project.model.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.*;

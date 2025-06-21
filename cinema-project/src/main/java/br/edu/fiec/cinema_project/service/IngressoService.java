@@ -1,5 +1,5 @@
 package br.edu.fiec.cinema_project.service;
-import br.edu.fiec.cinema_project.model.enty.Ingressos;
+import br.edu.fiec.cinema_project.model.entity.Ingressos;
 import br.edu.fiec.cinema_project.repository.IngressoRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;

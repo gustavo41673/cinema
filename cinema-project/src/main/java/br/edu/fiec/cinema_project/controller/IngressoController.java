@@ -2,7 +2,7 @@ package br.edu.fiec.cinema_project.controller;
 
 
 import br.edu.fiec.cinema_project.model.dto.IngressoDTO;
-import br.edu.fiec.cinema_project.model.enty.Ingressos;
+import br.edu.fiec.cinema_project.model.entity.Ingressos;
 import br.edu.fiec.cinema_project.service.IngressoService;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;

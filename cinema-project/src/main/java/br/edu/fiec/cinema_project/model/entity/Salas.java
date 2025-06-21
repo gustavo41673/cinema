@@ -1,6 +1,6 @@
-package br.edu.fiec.cinema_project.model.enty;
+package br.edu.fiec.cinema_project.model.entity;
 
-import io.swagger.v3.oas.models.security.SecurityScheme;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -29,8 +29,10 @@ public class Salas {
     @Column(name = "tipo_sala")
     private String tipo_sala;
 
-
-
-
+    public Salas(Integer idSala, String nome, Integer capacidade) {
+        this.id_sala = idSala;
+        this.nome = nome;
+        this.capacidade = capacidade;
+    }
 
 }
