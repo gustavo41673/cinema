@@ -35,8 +35,9 @@ public class SalasController {
         return salasService.createSala(salas);
     }
 
-    @GetMapping(value = "/buscarPorCapacidadeMinima", produces = APPLICATION_JSON_VALUE)
-    public ResponseEntity<List<Salas>> buscarPorCapacidadeMinima(@RequestParam int capacidade) {
+    @ResponseStatus(HttpStatus.OK)
+    @GetMapping(produces = APPLICATION_JSON_VALUE, value = "BuscarPorCapacidade")
+    public ResponseEntity<List<Salas>> buscarPorCapacidade(@RequestParam int capacidade) {
         return ResponseEntity.ok(salasService.buscarPorCapacidadeMinima(capacidade));
     }
 
@@ -52,9 +53,8 @@ public class SalasController {
         salasService.delete(id);
     }
 
-
     @ResponseStatus(HttpStatus.OK)
-    @DeleteMapping(value = "delete")
+    @DeleteMapping(value = "deleteAll")
     public void deleteAll(){
         salasService.deleteAll();
     }
