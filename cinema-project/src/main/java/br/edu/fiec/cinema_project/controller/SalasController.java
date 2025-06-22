@@ -2,7 +2,6 @@ package br.edu.fiec.cinema_project.controller;
 
 
 import br.edu.fiec.cinema_project.model.dto.SalasDTO;
-import br.edu.fiec.cinema_project.model.entity.Ingressos;
 import br.edu.fiec.cinema_project.model.entity.Salas;
 import br.edu.fiec.cinema_project.service.SalasService;
 import org.springframework.http.HttpStatus;
