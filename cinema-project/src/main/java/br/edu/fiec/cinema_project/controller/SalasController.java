@@ -1,6 +1,7 @@
 package br.edu.fiec.cinema_project.controller;
 
 
+import br.edu.fiec.cinema_project.model.dto.SalasDTO;
 import br.edu.fiec.cinema_project.model.entity.Ingressos;
 import br.edu.fiec.cinema_project.model.entity.Salas;
 import br.edu.fiec.cinema_project.service.SalasService;
@@ -45,6 +46,12 @@ public class SalasController {
     @GetMapping(produces = APPLICATION_JSON_VALUE, value = "nome")
     public Stream<Object> getByName_salas(String nome){
         return salasService.getByNome(nome);
+    }
+
+    @ResponseStatus(HttpStatus.OK)
+    @PutMapping(produces = APPLICATION_JSON_VALUE, consumes = APPLICATION_JSON_VALUE, value = "update")
+    public Salas update(@RequestParam Integer id, @RequestBody SalasDTO dto) {
+        return salasService.update(id, dto);
     }
 
     @ResponseStatus(HttpStatus.OK)

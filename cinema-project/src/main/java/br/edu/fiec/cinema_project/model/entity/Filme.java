@@ -34,7 +34,6 @@ public class Filme {
     @Column(name = "genero")
     private String genero;
 
-    // Construtor alternativo (sem id)
     public Filme(String titulo, Integer duracao_min, Integer ano_lancamento, String classificacao_etaria, String genero) {
         this.titulo = titulo;
         this.duracao_min = duracao_min;

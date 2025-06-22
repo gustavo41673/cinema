@@ -25,5 +25,5 @@ public class SessaoDTO {
     @JsonFormat(pattern = "HH:mm:ss")
     private LocalTime horario;
 
-    private BigDecimal preco_base;
+    private BigDecimal precoBase;
 }

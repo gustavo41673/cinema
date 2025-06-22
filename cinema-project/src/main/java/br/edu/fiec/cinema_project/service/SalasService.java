@@ -18,7 +18,6 @@ public class SalasService {
 
     public Salas create(SalasDTO dto) {
         Salas salas = new Salas();
-        salas.setId_sala(dto.getId_sala());
         salas.setNome(dto.getNome());
         salas.setCapacidade(dto.getCapacidade());
         salas.setTipo_sala(dto.getTipo_sala());
@@ -64,6 +63,22 @@ public class SalasService {
             ));
         }
         return resultado;
+    }
+    public Salas update(Integer id, SalasDTO dto) {
+        return salaRepository.findById(id)
+                .map(Sala -> {
+                    Sala.setNome(dto.getNome());
+                    Sala.setCapacidade(dto.getCapacidade());
+                    Sala.setTipo_sala(dto.getTipo_sala());
+                    Salas updated = salaRepository.save(Sala);
+                    return new Salas(
+                            updated.getId_sala(),
+                            updated.getNome(),
+                            updated.getCapacidade(),
+                            updated.getTipo_sala()
+                    );
+                })
+                .orElse(null);
     }
 
     public void delete(Integer id) {

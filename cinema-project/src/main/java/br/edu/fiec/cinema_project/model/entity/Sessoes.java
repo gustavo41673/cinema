@@ -16,17 +16,17 @@ import java.time.LocalTime;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-public class Sessao {
+public class Sessoes {
 
     @Id
     @GeneratedValue
     @Column(name = "id_sessao")
     private Integer id_sessao;
 
-    @Column(nullable = false,name = "id_filme")
+    @Column(nullable = false, name = "id_filme")
     private Integer id_filme;
 
-    @Column(nullable = false,name = "id_sala")
+    @Column(nullable = false, name = "id_sala")
     private Integer id_sala;
 
     @Column(name = "data")
@@ -36,15 +36,7 @@ public class Sessao {
     private LocalTime horario;
 
     @Column(name = "preco_base")
-    private BigDecimal preco_base;
-
-    public Sessao(Integer id_sessao, Filme filme, Salas sala, LocalDate data, LocalTime horario, BigDecimal preco_base) {
-        this.id_sessao = id_sessao;
-        this.filme = filme;
-        this.id_sala = id_sala;
-        this.data = data;
-        this.horario = horario;
-        this.preco_base = preco_base;
-    }
+    private BigDecimal precoBase;
 
 }
+
