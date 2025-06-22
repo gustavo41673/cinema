@@ -48,6 +48,13 @@ public class SalasController {
 
     @ResponseStatus(HttpStatus.OK)
     @DeleteMapping(value = "delete")
+    public void delete(Integer id){
+        salasService.delete(id);
+    }
+
+
+    @ResponseStatus(HttpStatus.OK)
+    @DeleteMapping(value = "delete")
     public void deleteAll(){
         salasService.deleteAll();
     }
