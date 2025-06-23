@@ -12,9 +12,7 @@ public class IngressoDTO {
 
     private String nameCliente;
 
-
     private String assento;
-
 
     private String tipo_ingresso;
 

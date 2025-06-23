@@ -15,6 +15,7 @@ import java.time.LocalTime;
 public class SessaoDTO {
 
     private Integer id_sessao;
+
     private Integer id_filme;
 
     private Integer id_sala;

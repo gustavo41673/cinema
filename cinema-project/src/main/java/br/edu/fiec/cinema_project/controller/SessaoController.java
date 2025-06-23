@@ -46,6 +46,7 @@ public class SessaoController {
     public Stream<SessaoDTO> getByPreco(BigDecimal preco_base){
         return sessaoService.getByPrecoBase(preco_base);
     }
+
     @ResponseStatus(HttpStatus.OK)
     @PutMapping(produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE, value = "update")
     public Sessoes update(@RequestParam Integer id, @RequestBody SessaoDTO dto) {

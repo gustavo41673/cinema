@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-public class Filme {
+public class Filmes {
 
     @Id
     @GeneratedValue
@@ -26,19 +26,19 @@ public class Filme {
     private Integer duracao_min;
 
     @Column(name = "ano_lancamento")
-    private Integer ano_lancamento;
+    private Integer anoLancamento;
 
-    @Column(name = "classificacao_etaria")
-    private String classificacao_etaria;
+    @Column(name = "classificacaoEtaria")
+    private String classificacaoEtaria;
 
     @Column(name = "genero")
     private String genero;
 
-    public Filme(String titulo, Integer duracao_min, Integer ano_lancamento, String classificacao_etaria, String genero) {
+    public Filmes(String titulo, Integer duracao_min, Integer anoLancamento, String classificacaoEtaria, String genero) {
         this.titulo = titulo;
         this.duracao_min = duracao_min;
-        this.ano_lancamento = ano_lancamento;
-        this.classificacao_etaria = classificacao_etaria;
+        this.anoLancamento = anoLancamento;
+        this.classificacaoEtaria = classificacaoEtaria;
         this.genero = genero;
     }
 }
